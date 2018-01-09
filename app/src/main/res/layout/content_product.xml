@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="cf.aditya.shoppingapp.Product"
+    tools:showIn="@layout/activity_product">
+
+    <RelativeLayout
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <ProgressBar
+            android:id="@+id/product_loading_bar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="false"
+            android:layout_centerVertical="true"
+            android:visibility="invisible" />
+
+        <ScrollView
+            android:id="@+id/productInfo"
+            android:layout_width="368dp"
+            android:layout_height="495dp"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/productImages"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="0dp">
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/productimagepager"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp">
+
+                    </android.support.v4.view.ViewPager>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/productdetail"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="8dp">
+
+                    <TextView
+                        android:id="@+id/product_Name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="24dp" />
+
+                    <TextView
+                        android:id="@+id/product_Price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/product_Name"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/product_old_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/product_Price"
+                        android:layout_margin="5dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/product_brand"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/product_old_price"
+                        android:layout_margin="5dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/product_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_below="@+id/product_brand"
+                        android:layout_margin="5dp"
+                        android:layout_marginTop="5dp"
+                        android:textColor="@android:color/black"
+                        android:textSize="20dp" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
